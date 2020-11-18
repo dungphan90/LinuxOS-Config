@@ -1,12 +1,17 @@
-# Detached working tree
-alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
+# Aliases
 
+alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit ${USER}@FNAL.GOV'
 alias ll="ls -lGh"
 alias vim-zenv="vim ~/.zenv.sh"
-alias code-zenv="code ~/.zenv.sh"
 alias top="bpytop"
 alias vim="nvim"
+
+# tmux aliases
+alias tms="tmux new -s"
+alias tmk="tmux kill-session -t"
+alias tma="tmux attach-session -t"
+alias tml="tmux ls"
 
 # FNAL connections
 function minosgpvm() {
