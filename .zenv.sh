@@ -1,7 +1,7 @@
 # Aliases
 
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
-alias kinit='kinit ${USER}@FNAL.GOV'
+alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias ll="ls -lGh"
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
@@ -37,8 +37,10 @@ function novagpvm() {
   if [ $# -gt 0 ];
   then
     ssh -XY dphan@novagpvm$1.fnal.gov
+    # echo "Running with arguments."
   else
     ssh -XY dphan@novagpvm06.fnal.gov
+    # echo "Running without arguments."
   fi
 }
 
