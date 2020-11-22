@@ -5,7 +5,7 @@ alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias ll="ls -lGh"
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
-alias vim="nvim"
+# alias vim="nvim"
 
 # tmux aliases
 alias tms="tmux new -s"
@@ -50,10 +50,20 @@ function cheat() {
 }
 
 # Using PyEnv
-if [ "$SYSTEMOS" = "Linux" ]; then
+function setup_pyenv() {
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
-fi
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+  if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+  fi
+}
+
+function setup_scientific_python() {
+  setup_pyenv
+  source $HOME/Pyenvs/scientific/bin/activate
+}
+
+function setup_cudasupport_python() {
+  setup_pyenv
+  source $HOME/Pyenvs/cudasupport/bin/activate
+}
