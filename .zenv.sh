@@ -12,6 +12,7 @@ alias tms="tmux new -s"
 alias tmk="tmux kill-session -t"
 alias tma="tmux attach-session -t"
 alias tml="tmux ls"
+alias tmd="tmux detach"
 
 # FNAL connections
 function minosgpvm() {
@@ -66,4 +67,9 @@ function setup_scientific_python() {
 function setup_cudasupport_python() {
   setup_pyenv
   source $HOME/Pyenvs/cudasupport/bin/activate
+}
+
+function setup_root() {
+  source /home/dphan/ROOT-system/install/v6.22.06-cuda/bin/thisroot.sh
+  alias root="root -l"
 }
