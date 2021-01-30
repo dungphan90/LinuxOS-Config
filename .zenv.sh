@@ -5,7 +5,14 @@ alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias ll="ls -lGh"
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
-# alias vim="nvim"
+alias vim="nvim"
+alias labnote="jupyter lab"
+
+
+# ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIER=@im=ibus
+export QT_IM_MODULE=ibus
 
 # tmux aliases
 alias tms="tmux new -s"
@@ -67,6 +74,12 @@ function setup_scientific_python() {
 function setup_cudasupport_python() {
   setup_pyenv
   source $HOME/Pyenvs/cudasupport/bin/activate
+}
+
+function setup_pycuda() {
+  setup_pyenv
+  setup_root
+  source $HOME/Pyenvs/cudacomputing/bin/activate
 }
 
 function setup_root() {
