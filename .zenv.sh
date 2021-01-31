@@ -1,5 +1,19 @@
-# Aliases
+# X sessions
+function sxawesome() {
+  cd $HOME
+  unlink .xinitrc
+  ln -s $HOME/.xinit/xinitrc_awesome $HOME/.xinitrc
+  startx
+}
 
+function sxgnome() {
+  cd $HOME
+  unlink .xinitrc
+  ln -s $HOME/.xinit/xinitrc_gnome $HOME/.xinitrc
+  startx
+}
+
+# Aliases
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias ll="ls -lGh"
