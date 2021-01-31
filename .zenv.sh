@@ -1,3 +1,5 @@
+# Some of this comes from distrotube .dotfile: https://gitlab.com/dwt1/dotfiles/
+
 # X sessions
 function sxawesome() {
   cd $HOME
@@ -16,12 +18,24 @@ function sxgnome() {
 # Aliases
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit -f ${USER}@FNAL.GOV'
-alias ll="ls -lGh"
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
 alias vim="nvim"
 alias labnote="jupyter lab"
 
+# Navigation
+alias ..='cd ..' 
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Listings
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
 
 # ibus
 export GTK_IM_MODULE=ibus
