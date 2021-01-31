@@ -16,8 +16,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow"
 theme.wallpaper                                 = theme.dir .. "/wally.jpg"
-theme.font                                      = "Noto Sans Regular 13"
-theme.taglist_font                              = "Noto Sans Regular 22"
+theme.font                                      = "Noto Sans Regular 10"
+theme.taglist_font                              = "Noto Sans Regular 20"
 theme.fg_normal                                 = "#FEFEFE"
 theme.fg_focus                                  = "#7b88d3"
 theme.fg_urgent                                 = "#b74822"
@@ -370,7 +370,7 @@ function theme.at_screen_connect(s)
     --s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 27, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 22, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
