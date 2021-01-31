@@ -235,8 +235,8 @@ globalkeys = my_table.join(
     -- My applications (Super+Alt+Key)
     -- awful.key({ modkey, altkey }, "a", function () awful.util.spawn( terminal.." -e ncpamixer" ) end,
         -- {description = "ncpamixer" , group = "terminal apps" }),
-    awful.key({ modkey, altkey }, "b", function () awful.util.spawn( "firefox www.google.com" ) end,
-        {description = "running firefox web browser" , group = "gui apps" }),
+    awful.key({ modkey, altkey }, "b", function () awful.spawn( "firefox www.google.com" ) end,
+        {description = "running firefox web browser" , group = "super" }),
     -- awful.key({ modkey, altkey  }, "c", function () awful.util.spawn( terminal.." -e cmus" ) end,
         -- {description = "cmus" , group = "terminal apps" }),
     -- awful.key({ modkey, altkey }, "e", function () awful.util.spawn( "emacsclient -a 'emacs' -c" ) end,
@@ -711,6 +711,9 @@ awful.rules.rules = {
 
     { rule = { class = "Xfce4-settings-manager" },
           properties = { floating = false } },
+
+    { rule = { class = "Firefox" },
+          properties = { opacity = 1, maximized = false, flaoting = false} },
 
     { rule = { instance = "qutebrowser" },
           properties = { screen = 1, tag = " SYS " } },
