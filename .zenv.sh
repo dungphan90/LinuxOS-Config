@@ -130,3 +130,4 @@ function setup_root() {
   source /home/dphan/ROOT-system/install/v6.22.06-cuda/bin/thisroot.sh
   alias root="root -l"
 }
+

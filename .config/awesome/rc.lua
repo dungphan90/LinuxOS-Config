@@ -189,17 +189,17 @@ awful.util.mymainmenu = freedesktop.menu.build({
 --menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal("property::geometry", function(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
-end)
+--screen.connect_signal("property::geometry", function(s)
+--    -- Wallpaper
+--    if beautiful.wallpaper then
+--        local wallpaper = beautiful.wallpaper
+--        -- If wallpaper is a function, call it with the screen
+--        if type(wallpaper) == "function" then
+--            wallpaper = wallpaper(s)
+--        end
+--        gears.wallpaper.maximized(wallpaper, s, true)
+--    end
+--end)
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) end)
 
@@ -840,5 +840,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom --config  $HOME/.config/picom/picom.conf")
--- awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("xrandr --auto --output DisplayPort-1 --mode 1920x1080 --right-of DisplayPort-2")
+-- awful.spawn.with_shell("source ${HOME}/.kbdremap.sh")
 -- awful.spawn.with_shell("volumeicon")
