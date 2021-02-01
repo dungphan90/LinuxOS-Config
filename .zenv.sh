@@ -80,6 +80,22 @@ function novagpvm() {
   fi
 }
 
+# xrandr
+function combined_screen() {
+  xrandr --setmonitor CombinedDisplay auto DisplayPort-1,DisplayPort-2
+}
+
+function dual_screen() {
+  xrandr --auto --output DisplayPort-1 --mode 1920x1080 --right-of DisplayPort-2
+}
+
+function left_screen() {
+  xrandr --auto --output DisplayPort-1 --off
+}
+
+function right_screen() {
+  xrandr --auto --output DisplayPort-2 --off
+}
 # Utility functions
 function cheat() {
   curl cheat.sh/$1
