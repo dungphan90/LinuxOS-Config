@@ -841,5 +841,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- awful.spawn.with_shell("nitrogen --restore")
 -- awful.spawn.with_shell("picom --config  $HOME/.config/picom/picom.conf")
 awful.spawn.with_shell("xrandr --auto --output DisplayPort-1 --mode 1920x1080 --right-of DisplayPort-2")
+awful.spawn.with_shell("alsactl --file ~/.config/asound.state restore")
 -- awful.spawn.with_shell("source ${HOME}/.kbdremap.sh")
 -- awful.spawn.with_shell("volumeicon")
