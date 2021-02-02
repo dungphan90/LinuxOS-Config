@@ -69,12 +69,12 @@
 # End of xbindkeys configuration #
 ##################################
 # Increase volume
-"amixer set 'alsacontrol-output-volume' 15+"
-  XF86AudioNext
+"amixer set 'alsacontrol-output-volume' 5+"
+  XF86AudioRaiseVolume
 
 # Decrease volume
-"amixer set 'alsacontrol-output-volume' 15-"
-  XF86AudioPrev
+"amixer set 'alsacontrol-output-volume' 5-"
+  XF86AudioLowerVolume
 
 "amixer set 'alsacontrol-output-mute' toggle"
-  XF86AudioPlay
+  XF86AudioMute
