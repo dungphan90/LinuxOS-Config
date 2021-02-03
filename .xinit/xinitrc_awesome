@@ -51,4 +51,5 @@ fi
 #nitrogen --restore &
 #picom --config ${HOME}/.config/picom/picom.conf &
 #dual_screen
+ibus-daemon &
 exec awesome
