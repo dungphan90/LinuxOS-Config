@@ -16,6 +16,7 @@ function sxgnome() {
 }
 
 # Aliases
+alias rm='trash -v'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias vim-zenv="vim ~/.zenv.sh"
