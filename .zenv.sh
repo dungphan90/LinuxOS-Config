@@ -22,7 +22,7 @@ function audioForZoom() {
 
 # Aliases
 alias rm='trash -v'
-alias fresh='exec $SHELL'
+alias refresh='exec $SHELL'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias vim-zenv="vim ~/.zenv.sh"
