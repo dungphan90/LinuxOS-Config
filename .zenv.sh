@@ -15,8 +15,14 @@ function sxgnome() {
   startx
 }
 
+# Stream/ZOOM sound setup
+function audioForZoom() {
+  alsactl --file ${HOME}/.config/asound.state restore
+}
+
 # Aliases
 alias rm='trash -v'
+alias fresh='exec $SHELL'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias vim-zenv="vim ~/.zenv.sh"
