@@ -21,6 +21,7 @@ function audioForZoom() {
 }
 
 # Aliases
+alias tratu='./NPM/node_modules/.bin/tratu'
 alias rm='trash -v'
 alias refresh='exec $SHELL'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
