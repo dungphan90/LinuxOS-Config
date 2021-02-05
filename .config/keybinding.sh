@@ -7,7 +7,7 @@ function keybinding() {
   else
     echo "This is the Gigabyte AORUS desktop."
     XBINDKEYRC=${HOME}/.config/xbindkeysrc_aorusarch
-    xrandr --auto --output DisplayPort-1 --mode 1920x1080 --right-of DisplayPort-2 &
+    # xrandr --auto --output DisplayPort-1 --mode 1920x1080 --right-of DisplayPort-2 &
   fi
 
   if test -f "${HOME}/.xbindkeysrc"; then
