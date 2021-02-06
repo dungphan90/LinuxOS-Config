@@ -78,7 +78,7 @@ export ZSH="/home/dphan/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf zsh-interactive-cd copydir copyfile extract fd zsh-completions zsh-syntax-highlighting archlinux battery colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zenv.sh

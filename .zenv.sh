@@ -21,7 +21,6 @@ function audioForZoom() {
 }
 
 # Aliases
-alias tratu='~/NPM/node_modules/.bin/tratu'
 alias rm='trash -v'
 alias refresh='exec $SHELL'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
@@ -30,6 +29,8 @@ alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
 alias vim="nvim"
 alias labnote="jupyter lab"
+alias xcf="copyfile"
+alias xcd-"copydir"
 
 # Navigation
 alias ..='cd ..' 
