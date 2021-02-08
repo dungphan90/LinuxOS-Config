@@ -22,6 +22,7 @@ function audioForZoom() {
 
 # Aliases
 alias rm='trash -v'
+alias srm='sudo trash -v'
 alias refresh='exec $SHELL'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working tree
 alias kinit='kinit -f ${USER}@FNAL.GOV'
@@ -104,6 +105,11 @@ function right_screen() {
 # Utility functions
 function cheat() {
   curl cheat.sh/$1
+}
+
+# Connect to Keychron K6
+function k6() {
+  bluetoothctl connect DC:2C:26:E7:F5:49
 }
 
 # Using PyEnv
