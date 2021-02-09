@@ -28,7 +28,7 @@ alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
-alias vim="nvim"
+#alias vim="nvim"
 alias labnote="jupyter lab"
 alias xcf="copyfile"
 alias xcd-"copydir"
@@ -110,6 +110,13 @@ function cheat() {
 # Connect to Keychron K6
 function k6() {
   bluetoothctl connect DC:2C:26:E7:F5:49
+}
+
+# Backup data
+function backup_workspace() {
+  sudo mount /dev/sdb1 /mnt
+  sudo unison $HOME/Workspace /mnt/DataBackup/Workspace
+  sudo umount /dev/sdb1
 }
 
 # Using PyEnv
