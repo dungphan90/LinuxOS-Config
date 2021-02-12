@@ -228,7 +228,7 @@ local temp = lain.widget.temp({
         widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
     end
 })
---]]
+--
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
 
 
@@ -239,13 +239,13 @@ Copy/paste the city code in the URL to this file in city_id
 --]]
 local weathericon = wibox.widget.imagebox(theme.widget_weather)
 theme.weather = lain.widget.weather({
-    city_id = 2803138, -- placeholder (Belgium)
+    city_id = 4883817, -- placeholder (Belgium)
     notification_preset = { font = "Noto Sans Mono Medium 10", fg = theme.fg_normal },
     weather_na_markup = markup.fontfg(theme.font, "#ffffff", "N/A "),
     settings = function()
         descr = weather_now["weather"][1]["description"]:lower()
         units = math.floor(weather_now["main"]["temp"])
-        widget:set_markup(markup.fontfg(theme.font, "#ffffff", descr .. " @ " .. units .. "°C "))
+        widget:set_markup(markup.fontfg(theme.font, "#ffffff", descr .. "  " .. units .. "°C "))
     end
 })
 
@@ -409,11 +409,11 @@ function theme.at_screen_connect(s)
             wibox.container.background(wibox.container.margin(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, 2, 3), "#20457C"),
             arrow("#20457C", "#588C7E"),
             wibox.container.background(wibox.container.margin(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, 3, 4), "#588C7E"),
-            arrow("#588C7E", "#F2AE72"),
-            wibox.container.background(wibox.container.margin(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, 4, 4), "#F2AE72"),
-            --arrow("#4B3B51", "#CB755B"),
-            --wibox.container.background(wibox.container.margin(wibox.widget { weathericon, theme.weather.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#CB755B"),
-            arrow("#F2AE72", "#D96459"),
+            --arrow("#588C7E", "#F2AE72"),
+            --wibox.container.background(wibox.container.margin(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, 4, 4), "#F2AE72"),
+            arrow("#588C7E", "#CB755B"),
+            wibox.container.background(wibox.container.margin(wibox.widget { weathericon, theme.weather.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#CB755B"),
+            arrow("#CB755B", "#D96459"),
             wibox.container.background(wibox.container.margin(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#D96459"),
             arrow("#D96459", "#8C4646"),
             wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#8C4646"),

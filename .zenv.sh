@@ -20,6 +20,11 @@ function audioForZoom() {
   alsactl --file ${HOME}/.config/asound.state restore
 }
 
+# Zoom quick kill
+function zoomkill() {
+  kill -9 `procs zoom | awk '{print $1}' | tail -n 1`
+}
+
 # Aliases
 alias rm='trash -v'
 alias srm='sudo trash -v'
