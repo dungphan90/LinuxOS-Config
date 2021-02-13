@@ -25,6 +25,11 @@ function zoomkill() {
   kill -9 `procs zoom | awk '{print $1}' | tail -n 1`
 }
 
+# Slack quick kill
+function slackkill() {
+  kill -9 `procs slack | awk '{print $1}' | head -n 3 | tail -n 1`
+}
+
 # Aliases
 alias rm='trash -v'
 alias srm='sudo trash -v'
@@ -33,7 +38,7 @@ alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
-#alias vim="nvim"
+alias vim="nvim"
 alias labnote="jupyter lab"
 alias xcf="copyfile"
 alias xcd-"copydir"
