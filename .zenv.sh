@@ -31,6 +31,7 @@ function slackkill() {
 }
 
 # Aliases
+alias vim="nvim"
 alias rm='trash -v'
 alias srm='sudo trash -v'
 alias refresh='exec $SHELL'

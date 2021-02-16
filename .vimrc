@@ -6,12 +6,20 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-fugitive'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'flazz/vim-colorschemes'
+Plug 'felixhummel/setcolors.vim'
 call plug#end()
 
-" Default behavior
+" default colorscheme
+colorscheme delek
+set t_Co=256
+
+" default behavior
 set wrap		   "Set deafult line wrapping
 set mouse=a		   "Allow mouse
 set number relativenumber  "Using hybrid numbering
+set autoread		   "Load file change automatically
 
 " lightline behavior
 set laststatus=2  "Show lightline status bar
@@ -27,5 +35,12 @@ let g:lightline = {
       \ },
       \ }
 
+
+" clang high-lighing config
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 0
 
 
