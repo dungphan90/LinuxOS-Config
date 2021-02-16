@@ -1,0 +1,1 @@
+/home/dphan/.vim/autoload/lightline_tagbar.vim
