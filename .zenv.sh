@@ -38,7 +38,7 @@ alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME' # Detached working
 alias kinit='kinit -f ${USER}@FNAL.GOV'
 alias vim-zenv="vim ~/.zenv.sh"
 alias top="bpytop"
-alias vim="nvim"
+#alias vim="nvim"
 alias labnote="jupyter lab"
 alias xcf="copyfile"
 alias xcd-"copydir"
