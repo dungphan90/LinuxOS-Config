@@ -1,7 +1,6 @@
 " Vim-Plug
 call plug#begin()
 Plug 'preservim/NERDTree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/tagbar'
@@ -9,6 +8,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'flazz/vim-colorschemes'
 Plug 'felixhummel/setcolors.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'shougo/neocomplete.vim'
 call plug#end()
 
 " default colorscheme
@@ -20,6 +21,8 @@ set wrap		   "Set deafult line wrapping
 set mouse=a		   "Allow mouse
 set number relativenumber  "Using hybrid numbering
 set autoread		   "Load file change automatically
+set tabstop=2
+set shiftwidth=2
 
 " lightline behavior
 set laststatus=2  "Show lightline status bar
