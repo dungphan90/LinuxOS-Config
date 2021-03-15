@@ -24,7 +24,7 @@ colorscheme delek
 set t_Co=256
 
 " auto-pairs
-let g:AutoPairsMapBS = 0 " Do not pair delete (fuck up the comments for some languages like Python or Vim)
+" let g:AutoPairsMapBS = 0 " Do not pair delete (fuck up the comments for some languages like Python or Vim)
 
 " deoplete config
 let g:deoplete#enable_at_startup = 1
@@ -53,4 +53,5 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 0
 
-
+" automate building code
+autocmd BufWritePost /home/dphan/Workspace/minos_std/NDresBin-2/plot_recoEspect_vs_y.C silent! execute "setup_root; root /home/dphan/Workspace/minos_std/NDresBin-2/plot_recoEspect_vs_y.C" | redraw!
