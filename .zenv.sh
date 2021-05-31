@@ -1,5 +1,19 @@
 # Some of this comes from distrotube .dotfile: https://gitlab.com/dwt1/dotfiles/
 
+# QMK
+export PATH="/home/dphan/.local/bin:$PATH"
+
+# ESP32
+function setup_esp32() {
+  source ~/esp/esp-idf/export.sh
+  export PATH="/home/dphan/.platformio/penv/bin:$PATH"
+}
+
+# LaTeX
+export PATH="/opt/texlive/2021/bin/x86_64-linux:$PATH"
+export MANPATH="/opt/texlive/2021/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/opt/texlive/2021/texmf-dist/doc/info:$INFOPATH"
+
 # X sessions
 function sxawesome() {
   cd $HOME
@@ -103,14 +117,17 @@ function novagpvm() {
 # xrandr
 function dual_screen() {
   xrandr --auto --output DP-2 --mode 1920x1080 --right-of DP-4
+	nitrogen --restore
 }
 
 function left_screen() {
   xrandr --auto --output DP-2 --off
+	nitrogen --restore
 }
 
 function right_screen() {
   xrandr --auto --output DP-4 --off
+	nitrogen --restore
 }
 # Utility functions
 function cheat() {
@@ -155,7 +172,25 @@ function setup_pycuda() {
 }
 
 function setup_root() {
-  source /home/dphan/ROOT-system/install/v6.22.06-cuda/bin/thisroot.sh
+  source /home/dphan/ROOT-system/install/v6.24.00-cuda/bin/thisroot.sh
   alias root="root -l"
+}
+
+function setup_nvm() {
+	source /usr/share/nvm/init-nvm.sh
+
+	echo "You can now install node.js versions (e.g. nvm install 10) and"
+  echo "activate them (e.g. nvm use 10)."
+	echo ""
+	echo "init-nvm.sh is a convenience script which does the following:"
+	echo ""
+	echo "[ -z \"\$NVM_DIR\" ] \&\& export NVM_DIR=\"\$HOME\/.nvm\""
+	echo "source /usr/share/nvm/nvm.sh"
+	echo "source /usr/share/nvm/bash_completion"
+	echo "source /usr/share/nvm/install-nvm-exec"
+	echo ""
+	echo "You may wish to customize and put these lines directly in your"
+	echo ".bashrc (or similar) if, for example, you would like an NVM_DIR"
+	echo "other than ~/.nvm or you don't want bash completion."
 }
 

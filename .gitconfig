@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 name = dungphan90
 email = d.phan@ucl.ac.ul
+[init]
+	defaultBranch = main
