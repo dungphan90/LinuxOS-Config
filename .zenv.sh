@@ -3,6 +3,9 @@
 # QMK
 export PATH="/home/dphan/.local/bin:$PATH"
 
+# PlatformIO
+export PATH="/home/dphan/.platformio/penv/bin:$PATH"
+
 # ESP32
 function setup_esp32() {
   source ~/esp/esp-idf/export.sh
@@ -155,6 +158,10 @@ function setup_pyenv() {
   fi
 }
 
+function setup_fzf() {
+  source ~/.fzf.zsh
+}
+
 function setup_scientific_python() {
   setup_pyenv
   source $HOME/Pyenvs/scientific/bin/activate
@@ -194,3 +201,6 @@ function setup_nvm() {
 	echo "other than ~/.nvm or you don't want bash completion."
 }
 
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

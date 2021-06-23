@@ -22,6 +22,3 @@ function keybinding() {
 
 keybinding
 
-# Key remap
-setxkbmap -option caps:escape
-
